@@ -1,0 +1,79 @@
+{% extends "master.html" %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block extra_css %}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+{% endblock %}
+
+{% block content %}
+  <h1>Welcome {{ f_name }}</h1>
+<h2>This Is EMPLOYEE Table <a href="{% url 'add_employee' %}"> + Add Employee</a> </h2>
+<table>
+    <tr>
+    <th>EMP_ID</th>
+    <th>FIRST NAME</th>
+    <th>LAST NAME</th>
+    <th>AGE</th>
+    <th>EMAIL</th>
+    <th>SALARY</th>
+    <th>DEP_id</th>
+    <th>EDIT</th>
+    <th>DELETE</th>
+    <th>ACTIVE</th>
+
+  </tr>
+  {% for emp_obj in emp_list %}
+
+  <tr>
+    <td>{{emp_obj.id}}</td>
+    <td>{{emp_obj.f_name}}</td>
+    <td>{{emp_obj.l_name}}</td>
+    <td>{{emp_obj.age}}</td>
+    <td>{{emp_obj.email}}</td>
+    <td>{{emp_obj.salary}}</td>
+      <td>{{emp_obj.dep.dep_name}}</td>
+      <td> <a href="{% url 'edit_emp' emp_obj.id %}"> EDIT Employee</a> </td>
+      <td> <a href="{% url 'delete_emp' emp_obj.id %}"> DELETE Employee</a> </td>
+      <td>{{emp_obj.active}}</td>
+  </tr>
+  {% endfor %}
+</table>
+<h2>This Is Department Table <a href="{% url 'add_dep' %}">+ Add Dep</a></h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>DEP_NAME</th>
+        <th>DEP_LOCATION</th>
+        <th>EDIT DEPARTMENT</th>
+        <th>DELETE DEPARTMENT</th>
+    </tr>
+    {% for y in dep_list %}
+    <tr>
+        <td>{{y.id}}</td>
+        <td>{{y.dep_name}}</td>
+        <td>{{y.dep_location}}</td>
+        <td> <a href="{% url 'edit_dep' y.id %}"> Edit </a></td>
+        <td> <a href="{% url 'delete_dep' y.id %}"> DELETE </a></td>
+    </tr>
+    {% endfor %}
+</table>
+<h2></h2>
+{% endblock %}

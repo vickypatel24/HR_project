@@ -1,0 +1,45 @@
+{% extends "master.html" %}
+
+{% block title %}
+Users
+{% endblock %}
+
+{% block extra_css %}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+{% endblock %}
+{% block content %}
+<table>
+    <tr>
+    <th>ID</th>
+    <th>USER NAME</th>
+    <th>EMAIL</th>
+    <th>FIRST NAME</th>
+    <th>LAST NAME</th>
+
+  </tr>
+  {% for x in user_list %}
+  <tr>
+    <td>{{x.id}}</td>
+    <td>{{x.username}}</td>
+    <td>{{x.email}}</td>
+    <td>{{x.first_name}}</td>
+    <td>{{x.last_name}}</td>
+    <td></td>
+  </tr>
+    {% endfor %}
+</table>
+{% endblock %}

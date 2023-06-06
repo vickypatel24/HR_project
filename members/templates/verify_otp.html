@@ -1,0 +1,27 @@
+{% extends "master_login_view.html" %}
+{% block title %}
+  Verify Otp
+{% endblock %}
+
+{% block content %}
+
+<form method="post" action="">
+        {% csrf_token %}
+  <div class="container">
+      <div style="text-align:center">
+      <span><b>Verify OTP</b></span>
+      </div>
+    <label for="otp"><b>Email</b></label><br><br>
+    <input type="number" placeholder="Enter OTP" name="otp" >
+            <b style="color:red">
+{{ error_msg }}
+      </b>
+
+    <button type="submit">Submit</button>
+
+  </div>
+</form>
+{% endblock %}
+
+
+

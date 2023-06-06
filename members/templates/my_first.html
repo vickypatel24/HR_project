@@ -1,0 +1,82 @@
+{% load static %}
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<script src="{% static 'js/myfirst.js' %}"></script>-->
+<!--<body>-->
+
+<!--<button onclick="myFunction()">Click me!</button>-->
+
+<!--<p>In myfirst.js you can see the myFunction function.</p>-->
+
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+  </head>
+  <body>
+    <div class="container-fluied">
+      <nav class="navbar bg-secondary p-0 ps-3">
+        <div class="d-flex">
+          <a class="navbar-brand" href="#">
+            <img src="{% static 'image/softicse logo.png' %}" alt="" />
+          </a>
+        </div>
+
+        <div class="">
+          <span class="navbar-text"
+            ><b>Softices Academy</b> <br />202 Panval Point ,Sudama chawk,Mota
+            varachha , surat,Gujrat 394101</span
+          >
+        </div>
+      </nav>
+      <div class="container">
+        <div class="container-fluied pt-5">
+          <button class="btn btn-success" onclick="row()">Click-me</button>
+        </div>
+      </div>
+      <div class="container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Roll Number</th>
+              <th>Student Name</th>
+              <th>Math</th>
+              <th>Science</th>
+              <th>S.S.T</th>
+              <th>Total</th>
+              <th>Percentage</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody class="tbody"></tbody>
+        </table>
+      </div>
+      <div class="container">
+        <table class="table">
+          <tr>
+            <th>Totle Student</th>
+            <th>High Marks</th>
+            <th>Lowest Marks</th>
+            <th>Avarage Marks</th>
+          </tr>
+          <tr>
+            <th class="totalstudent"></th>
+            <th class="high"></th>
+            <th class="low"></th>
+            <th class="avarage"></th>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script src="{% static 'js/project.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  </body>
+</html>

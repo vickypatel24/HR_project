@@ -1,0 +1,56 @@
+{% extends "master.html" %}
+
+{% block title %}
+Add Employee
+{% endblock %}
+
+
+
+
+{% block content %}
+
+{{form}}
+
+{% endblock %}
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Add Employee</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<form method="post">-->
+<!--    {% csrf_token %}-->
+
+<!--<h2>-->
+<!--  {% for x in dname %}-->
+<!--&lt;!&ndash;  {{x.dep_name}}dname&ndash;&gt;-->
+<!--  {{x.id}}id-->
+<!--  {% endfor %}-->
+<!--</h2>-->
+<!--  <label for="fname">First name:</label>-->
+<!--  <input type="text" id="fname" name="fname" value="{{f_name}}"><br><br>-->
+<!--  <label for="lname">Last Name:</label>-->
+<!--  <input type="text" id="lname" name="lname"><br><br>-->
+<!--  <label for="age">Age :</label>-->
+<!--  <input type="number" id="age" name="age"><br><br>-->
+<!--  <label for="depid">Dep id:</label>-->
+<!--  <select id="depid" name="depid">-->
+<!--    {% for x in dname %}-->
+<!--    <option value="{{x.id}}">{{x.dep_name}}</option>-->
+<!--    {% endfor %}-->
+<!--  </select><br><br>-->
+<!--  <label for="salary">Salary:</label>-->
+<!--  <input type="number" id="salary" name="salary"><br><br>-->
+<!--  <label for="email">Email:</label>-->
+<!--  <input type="email" id="email" name="email"><br><br>-->
+<!--  <label for="active">Active:</label>-->
+<!--  <input type="checkbox" id="active" name="active"><br><br>-->
+<!--  {{form}}-->
+<!--  <input type="submit" value="Submit">-->
+
+
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->

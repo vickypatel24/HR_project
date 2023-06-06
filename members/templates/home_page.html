@@ -1,0 +1,54 @@
+{% extends "master.html" %}
+
+{% block title %}
+Home page
+
+{% endblock %}
+{% block extra_css %}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #99a7bb;
+}
+{% endblock %}
+
+{% block content %}
+<br><br>
+
+<div style="width:600px">
+    <table>
+        <tr>
+        <th><a href="{% url 'user_view' %}">User</a></th>
+        <td><a href="{% url 'add_user' %}">Add User</a> </td>
+        <td><a href="{% url 'user_view' %}">Edit User</a> </td>
+        </tr>
+    </table>
+</div>
+<br><br>
+<div style="width:600px">
+    <table>
+        <tr>
+            <th><a href="{% url 'dep_list' %}">Department</a> </th>
+            <td><a href="{% url 'add_dep' %}">Add Dep</a> </td>
+            <td><a href="{% url 'dep_list' %}">Edit Dep</a> </td>
+        </tr>
+       <tr>
+            <th><a href="{% url 'emp_list' %}">Employee</a> </th>
+            <td><a href="{% url 'add_employee' %}">Add Employee</a> </td>
+            <td><a href="{% url 'emp_list' %}">Edit Employee</a> </td>
+        </tr>
+
+    </table>
+</div>
+
+{% endblock %}

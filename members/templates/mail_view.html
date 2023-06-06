@@ -1,0 +1,26 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Email
+{% endblock %}
+
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+<!--    <label for="subject">subject:</label>-->
+<!--    <input type="text" id="subject" name="subject" placeholder="Enter subject" value=""><br><br>-->
+
+<!--    <label for="message">message:</label>-->
+<!--    <input type="text" id="message" name="message" placeholder="Enter Your Massage Hear" value=""><br><br>-->
+
+    <label for="to_email">to_email:</label>
+    <input type="text" id="to_email" name="to_email" placeholder="Enter Your email id" value=""><br><br>
+
+    <input type="submit" value="Submit">
+    {{ error_msg }}
+
+</form>
+
+{% endblock %}
+
