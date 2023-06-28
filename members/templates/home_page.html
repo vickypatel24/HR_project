@@ -15,6 +15,7 @@ td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+  background-color: #ccffe6;
 }
 
 tr:nth-child(even) {
@@ -28,7 +29,7 @@ tr:nth-child(even) {
 <div style="width:600px">
     <table>
         <tr>
-        <th><a href="{% url 'user_view' %}">User</a></th>
+        <th><a href="{% url 'user_view' %}">Users</a></th>
         <td><a href="{% url 'add_user' %}">Add User</a> </td>
         <td><a href="{% url 'user_view' %}">Edit User</a> </td>
         </tr>
