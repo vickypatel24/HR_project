@@ -499,7 +499,7 @@ def add_user(request):
         n_user.save()
         # user = User.objects.all().values()
         # print(user)
-        return redirect('home.html')
+        return redirect('/home/')
 
 
     return HttpResponse(template.render(context, request))
